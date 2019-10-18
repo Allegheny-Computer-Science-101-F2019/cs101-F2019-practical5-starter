@@ -31,23 +31,19 @@ public class RunCampaign implements Campaign {
     int campaignRound = 0;
     int currentInputSize = INPUT_SIZE_START;
     ResultsTable results = new ResultsTable(CAMPAIGN_LENGTH);
-    // display a debugging statement about the start of a campaign
-    System.out.println("Starting a campaign of experiments with " + repeater.getName() + " ...");
-    // run a campaign for all of the specified rounds of a campaign
+    // TODO: Add the correct labels before and after the campaign
     while (campaignRound < CAMPAIGN_LENGTH) {
       long timeBefore = System.currentTimeMillis();
       repeater.repeat(CHARACTER, currentInputSize);
       long timeAfter = System.currentTimeMillis();
       long timeElapsed = timeAfter - timeBefore;
       results.addResult((long)currentInputSize, timeElapsed);
-      // display a diagnostic message about the current round
       System.out.println(IDENTATION + "Running round " + campaignRound
           + " with input size " + currentInputSize);
       currentInputSize = currentInputSize * INPUT_GROWTH_FACTOR;
       campaignRound++;
     }
-    // print the final details about the campaign of experiments
-    System.out.println("... Finishing a campaign of experiments with " + repeater.getName());
+    // TODO: Make sure that your program is creating the correct data table
     return results;
   }
 
