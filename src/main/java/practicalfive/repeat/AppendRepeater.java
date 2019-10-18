@@ -10,17 +10,14 @@ public class AppendRepeater extends Repeater {
 
   /** Set the name of the AppendRepeater. */
   public AppendRepeater() {
-    name = "AppendRepeater";
+    // TODO: set the name of this repeater
   }
 
   /** Use repeated concatenation to compose a String with "repeats" copies of a
    *  specified "character". */
   public String repeat(char character, int repeats) {
-    java.lang.StringBuilder stringBuilder = new StringBuilder();
-    for (int j = 0; j < repeats; j++) {
-      stringBuilder.append(character);
-    }
-    return stringBuilder.toString();
+    // TODO: add the implementation of this method for repeat2
+    return null;
   }
 
 }
